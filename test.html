@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document with Ads</title>
+</head>
+<body>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+    <!-- More paragraphs here -->
+
+    <script>
+        // Assuming these are your ad indices and HTML
+        const paragraphIndices = [1, 2]; // Indices where ads should be inserted
+        const ads = [
+            '<iframe src=\'<a href="https://example.com" target="_blank"><div class="horizontal-ad">Ad 1</div></a>\' width="100%" height="150" style="border:none;"></iframe>',
+            '<iframe src=\'<a href="https://example.com" target="_blank"><div class="horizontal-ad">Ad 2</div></a>\' width="100%" height="150" style="border:none;"></iframe>'
+        ];
+
+        // Get all paragraph elements on the page
+        const paragraphs = Array.from(document.querySelectorAll('p'));
+
+        // Insert ads after the specified paragraphs
+        paragraphIndices.forEach((index, i) => {
+            if (index < paragraphs.length) {
+                const adHtml = ads[i];
+                const adElement = document.createElement('div');
+                adElement.innerHTML = adHtml;
+                paragraphs[index].insertAdjacentElement('afterend', adElement);
+            }
+        });
+    </script>
+</body>
+</html>
