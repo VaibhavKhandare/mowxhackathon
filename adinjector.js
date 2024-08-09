@@ -1,5 +1,5 @@
-const analyzeUrl = "https://6d0f-182-73-85-174.ngrok-free.app/analyze_content"; // Replace with your Flask app URL for content analysis
-const generateAdsUrl = "https://6d0f-182-73-85-174.ngrok-free.app/generate_ads_only"; // Replace with your Flask app URL for ad generation
+const analyzeUrl = "https://24c9-14-99-167-102.ngrok-free.app/analyze_content"; // Replace with your Flask app URL for content analysis
+const generateAdsUrl = "https://24c9-14-99-167-102.ngrok-free.app/generate_ads_only"; // Replace with your Flask app URL for ad generation
 
 async function fetchAndInjectAds() {
     const currentURL = window.location.href; // Get current page URL
